@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree
+ *= require_self
+ *= require bootstrap-datepicker
+ *= require bootstrap-datepicker3
+ */
+
+body {
+	font-size: 1.7em; 
+	background: #DDE1E2;
+}
+
+.task {
+  margin-bottom: 0.5em;
+  .action {opacity: 0;}
+  &:hover .action {
+    opacity: 1;
+    transition: opacity 0.6s ease
+  }
+}
+
+.buffer_top {margin-top: 2em;}
+
+.completed_true .title {color: black; text-decoration: line-through;}
+
+#or {padding-right: 14px; position: relative; top: 12px;}
+
+.button {position: relative; top: 7px;}
+
+/*main priorities
+.priority_1 {color: #008992}
+.priority_2 {color: #c09200}
+.priority_3 {color: #c00000}
+*/
+
+.completed_true .done {display: none;}
+.completed_false .undone {display: none;}
+
+.sorting_priorities {color: #5188C8; position: absolute; right: 50%}
+
+.action {color: #5188C8;}
+
+.icons {
+	display: inline;
+	position: absolute;
+  	right: 2%;
+}
+
