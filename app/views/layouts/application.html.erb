@@ -2,10 +2,11 @@
 <html>
 <head>
   <title>Todo</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+
 </head>
 <body>
 
@@ -13,7 +14,7 @@
 <% if user_signed_in? %>
 
 <nav class="navbar navbar-default" role="navigation">
-  
+
   <div class="container-fluid">
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,7 +34,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Signed in as: <%= current_user.username %> 
+            Signed in as: <%= current_user.username %>
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
@@ -64,10 +65,10 @@
       <ul class="nav navbar-nav">
         <li class="disabled"><a>Tasks</a></li>
       </ul>
-      
+
       <!-- Log in or sign up -->
       <ul class="nav navbar-nav navbar-right">
-        
+
         <% if current_page?(user_session_path) %>
           <li class="active">
             <style type="text/css">#or{padding-left: 14px;}</style>
@@ -89,7 +90,7 @@
 
 <% end %>
 
-  
+
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
